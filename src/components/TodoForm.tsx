@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { TextField } from "@mui/material";
+import React, { useState } from 'react';
+import { TextField } from '@mui/material';
 
-import { addTask } from "../store/store";
+import { addTask } from '../store/store';
 
-import { TaskInfo } from "../style/Todo";
+import { TaskInfo } from '../style/Todo';
 
 const TodoForm = () => {
-  const [info, setInfo] = useState("");
+  const [info, setInfo] = useState('');
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     addTask(info);

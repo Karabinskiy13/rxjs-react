@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Typography } from "@mui/material";
+import React, { useEffect, useState } from 'react';
+import { Typography } from '@mui/material';
 
-import { ITodo, tasks$ } from "../store/store";
+import { ITodo, tasks$ } from '../store/store';
 
-import { HeadInfo, TaskInfo } from "../style/Todo";
+import { HeadInfo, TaskInfo } from '../style/Todo';
 
 const TodoInfo = () => {
   const [tasks, setTasks] = useState<ITodo[]>([]);

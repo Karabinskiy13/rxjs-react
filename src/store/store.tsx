@@ -1,5 +1,5 @@
-import { BehaviorSubject } from "rxjs";
-import moment from "moment";
+import { BehaviorSubject } from 'rxjs';
+import moment from 'moment';
 
 export interface ITodo {
   id: number;
@@ -11,16 +11,16 @@ export interface ITodo {
 export const tasks: ITodo[] = [
   {
     id: 1,
-    text: "Learn JavaScript",
+    text: 'Learn JavaScript',
     done: true,
-    time: moment().calendar(),
+    time: moment().calendar()
   },
   {
     id: 2,
-    text: "Learn React",
+    text: 'Learn React',
     done: true,
-    time: moment().calendar(),
-  },
+    time: moment().calendar()
+  }
 ];
 
 export const tasks$ = new BehaviorSubject(tasks);
@@ -30,7 +30,7 @@ export const addTask = (text: string) => {
     id: Math.random() * 100,
     text,
     done: false,
-    time: moment().calendar(),
+    time: moment().calendar()
   });
   tasks$.next(tasks);
 };

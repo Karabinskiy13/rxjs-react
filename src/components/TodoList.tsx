@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { ITodo, tasks$ } from "../store/store";
+import { ITodo, tasks$ } from '../store/store';
 
-import TodoItem from "./TodoItem";
+import TodoItem from './TodoItem';
 
 const TodoList = () => {
   const [tasks, setTasks] = useState<ITodo[]>([]);
