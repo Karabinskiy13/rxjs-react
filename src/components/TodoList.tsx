@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+
 import { ITodo, tasks$ } from "../store/store";
+
 import TodoItem from "./TodoItem";
 
 const TodoList = () => {

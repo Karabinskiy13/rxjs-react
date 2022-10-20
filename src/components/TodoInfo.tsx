@@ -1,6 +1,9 @@
-import { Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { Typography } from "@mui/material";
+
 import { ITodo, tasks$ } from "../store/store";
+
+import { HeadInfo, TaskInfo } from "../style/Todo";
 
 const TodoInfo = () => {
   const [tasks, setTasks] = useState<ITodo[]>([]);
@@ -12,14 +15,18 @@ const TodoInfo = () => {
   const unDoneTasks = tasks.filter((t) => t.done === false).length;
 
   return (
-    <header>
-      <Typography variant="h2">RxJs+React TodoList</Typography>
-      {unDoneTasks !== 0 ? (
-        <Typography variant="h6"> Tasks done {unDoneTasks}</Typography>
-      ) : (
-        <Typography variant="h6">Tasks done {unDoneTasks}</Typography>
-      )}
-    </header>
+    <div>
+      <HeadInfo>
+        <Typography variant="h2">RxJs+React TodoList</Typography>
+      </HeadInfo>
+      <TaskInfo>
+        {unDoneTasks !== 0 ? (
+          <Typography variant="h6"> Tasks done {unDoneTasks}</Typography>
+        ) : (
+          <Typography variant="h6">Tasks done {unDoneTasks}</Typography>
+        )}
+      </TaskInfo>
+    </div>
   );
 };
 
